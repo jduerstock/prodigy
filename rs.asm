@@ -4417,7 +4417,7 @@ __alFlmul:
 
 ; seg008
 
-%define x_sub_19110 0911:0x0
+%define x_sub_19110 0x911:0x0
 sub_19110:
 	push	bp
 	mov_bp_sp
@@ -12740,8 +12740,7 @@ sub_31ba1:
 	jz	.l713e
 	push	word [0x47c0]
 	push	word [0x47be]
-	; call	word x_sub_19110
-	call	word 0x911:0x0
+	call	word x_sub_19110
 	db	0x83,0xc4,0x04,0xc7,0x06,0x6e,0x4a,0x00,0x00
 
 .l713e:
