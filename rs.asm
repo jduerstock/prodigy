@@ -12678,7 +12678,7 @@ sub_318a2:
 	mov	cx,[0x47a2]
 	idiv	cx
 	mov	ax,[bp+0x4]
-	db	0x2b,0xc2
+	sub_ax_dx
 	pop	bp
 	ret	0x2
 
