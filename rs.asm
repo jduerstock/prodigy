@@ -57,6 +57,11 @@
 	dw	%1
 %endmacro
 
+%macro cmp_ax 1
+	db	0x3d
+	dw	%1
+%endmacro
+
 %macro mov_ax_si 0
 	db	0x8b,0xc6 ; mov ax,si
 %endmacro
@@ -2841,7 +2846,7 @@ sub_1398a:
 	mov	ax,[es:0xdd2]
 	or_ax_ax
 	jz	.l8fb6
-	db	0x3d,0x01,0x00 ; cmp	ax,0x1
+	cmp_ax	0x1
 	jnz	.l8fa7
 	jmp	word .l9729
 
