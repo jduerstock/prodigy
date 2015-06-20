@@ -71,6 +71,10 @@
 	dw	%1
 %endmacro
 
+%macro mov_ax_dx 0
+	db	0x8b,0xc2 ; mov ax,dx
+%endmacro
+
 %macro mov_ax_si 0
 	db	0x8b,0xc6 ; mov ax,si
 %endmacro
@@ -4947,7 +4951,14 @@ sub_1a350:
 	loop	.lf8ee
 
 .lf8f3:
-	db	0x8b,0xc2,0x1f,0x5e,0x8b,0xe5,0x5d,0xca,0x06,0x00,0x00
+	mov_ax_dx
+	pop	ds
+	pop	si
+	mov_sp_bp
+	pop	bp
+	retf	0x6
+
+	db	0x00
 
 ; seg012
 
