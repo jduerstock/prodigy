@@ -3,6 +3,10 @@
 	db	0x03,0xc1 ; add ax,cx
 %endmacro
 
+%macro add_cx_ax 0
+	db	0x03,0xc8 ; add cx,ax
+%endmacro
+
 %macro add_ax 1
 	db	0x05
 	dw	%1
@@ -18,6 +22,10 @@
 
 %macro or_dx_dx 0
 	db	0x0b,0xd2 ; or dx,dx
+%endmacro
+
+%macro adc_bx_dx 0
+	db	0x13,0xda ; adc bx,dx
 %endmacro
 
 %macro and_ax 1
