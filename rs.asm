@@ -4050,9 +4050,10 @@ sub_1e7f3:
 	sub_ax_ax
 	push	ax
 	push	cs
-	db	0xe8,0x01,0x00
+	call	word sub_1e83e
 	retf
 
+sub_1e83e:
 	push	bp
 	mov_bp_sp
 	db	0x9a,0xcc,0x01,0xba,0x08
