@@ -16,6 +16,10 @@
 	dw	%1
 %endmacro
 
+%macro or_al_al 0
+	db	0x0a,0xc0 ; or al,al
+%endmacro
+
 %macro or_ax_ax 0
 	db	0x0b,0xc0 ; or ax,ax
 %endmacro
