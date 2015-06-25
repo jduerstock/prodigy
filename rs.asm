@@ -95,6 +95,10 @@
 	db	0x8b,0xc2 ; mov ax,dx
 %endmacro
 
+%macro mov_ax_bx 0
+	db	0x8b,0xc3 ; mov ax,bx
+%endmacro
+
 %macro mov_ax_si 0
 	db	0x8b,0xc6 ; mov ax,si
 %endmacro
