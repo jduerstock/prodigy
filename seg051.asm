@@ -864,14 +864,15 @@ sub_27555:
 	push	cs
 	call	word sub_26f52
 	call	word x_sub_28816
-	db	0x0b,0xc0
-	db	0x75,0x05
+	or_ax_ax
+	jnz	.lcdd7
 
 .lcdd2:
-	db	0x9a,0x0e,0x00,0x8b,0x17
+	call	word x_sub_278be
 
 .lcdd7:
-	db	0x8b,0xe5,0x5d
+	mov_sp_bp
+	pop	bp
 	retf	0x2
 
 sub_2785d:
