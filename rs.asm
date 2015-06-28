@@ -7,6 +7,14 @@
 	db	0x03,0xc0 ; add ax,ax
 %endmacro
 
+%macro add_ax_si 0
+	db	0x03,0xc6 ; add ax,si
+%endmacro
+
+%macro add_ax_di 0
+	db	0x03,0xc7 ; add ax,di
+%endmacro
+
 %macro add_cx_ax 0
 	db	0x03,0xc8 ; add cx,ax
 %endmacro
