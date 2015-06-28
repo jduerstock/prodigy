@@ -382,6 +382,7 @@ sub_2370c:
 	pop	bp
 	retf	0xa
 
+sub_2385a:
 	push	bp
 	mov_bp_sp
 	db	0x83,0xec,0x08
