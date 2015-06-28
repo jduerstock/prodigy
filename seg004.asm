@@ -552,7 +552,7 @@ sub_1398a:
 
 .l900b:
 	push	ax
-	call	word x_sub_256d8
+	call	word x_sub_25d68
 	jmp	word .l8f78
 
 .l9014:
