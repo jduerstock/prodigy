@@ -44,6 +44,10 @@
 	db	0x0b,0xd2 ; or dx,dx
 %endmacro
 
+%macro or_si_si 0
+	db	0x0b,0xf6 ; or si,si
+%endmacro
+
 %macro adc_bx_dx 0
 	db	0x13,0xda ; adc bx,dx
 %endmacro
