@@ -111,6 +111,10 @@
 	dw	%1
 %endmacro
 
+%macro mov_ax_cx 0
+	db	0x8b,0xc1 ; mov ax,cx
+%endmacro
+
 %macro mov_ax_dx 0
 	db	0x8b,0xc2 ; mov ax,dx
 %endmacro
