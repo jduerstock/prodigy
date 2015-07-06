@@ -123,6 +123,10 @@
 	db	0x8b,0xc6 ; mov ax,si
 %endmacro
 
+%macro mov_bx_si 0
+	db	0x8b,0xde ; mov bx,si
+%endmacro
+
 %macro mov_sp_bp 0
 	db	0x8b,0xe5 ; mov sp,bp
 %endmacro
