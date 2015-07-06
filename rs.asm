@@ -139,6 +139,10 @@
 	db	0x8b,0xf0 ; mov si,ax
 %endmacro
 
+%macro mov_di_ax 0
+	db	0x8b,0xf8 ; mov si,ax
+%endmacro
+
 %define x_j___catox 0x55:0xe00
 %define x_sub_10a67 0x55:0x517
 %define x_memcpy 0x55:0x13d8
