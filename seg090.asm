@@ -38,6 +38,7 @@ sub_3b1ea:
 	pop	bp
 	retf	0xc
 
+sub_3b259:
 	push	bp
 	mov_bp_sp
 	db	0xff,0x76,0x08,0xff
