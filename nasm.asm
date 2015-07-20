@@ -48,6 +48,10 @@
 	db	0x0b,0xf6 ; or si,si
 %endmacro
 
+%macro or_di_di 0
+	db	0x0b,0xff ; or di,di
+%endmacro
+
 %macro adc_bx_dx 0
 	db	0x13,0xda ; adc bx,dx
 %endmacro
