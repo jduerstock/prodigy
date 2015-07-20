@@ -89,7 +89,7 @@ sub_1ad6a:
 	mov	[bp-0x4],al
 	mov	ax,0x1
 	push	ax
-	lea ax,[bp-0x4]
+	lea	ax,[bp-0x4]
 	push	ss
 	push	ax
 	mov	ax,0x4
@@ -101,7 +101,7 @@ sub_1ad6a:
 	jz	.l0345
 
 .l039a:
-	call	word 0xa37:0xe
+	call	word 0xa37:0xe ; sub_1a37e
 
 .l039f:
 	mov_sp_bp
