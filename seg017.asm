@@ -177,10 +177,14 @@ sub_1ae47:
 	call	word sub_1ad6a
 	mov_di_ax
 	or_di_di
-	db	0x74,0xe8
+	jz	.l040f
 
 .l0427:
-	db	0x5e,0x5f,0x8b,0xe5,0x5d,0xca,0x06,0x00
+	pop	si
+	pop	di
+	mov_sp_bp
+	pop	bp
+	retf	0x6
 
 	push	bp
 	mov_bp_sp
