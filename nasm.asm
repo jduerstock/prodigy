@@ -19,6 +19,10 @@
 	db	0x03,0xc8 ; add cx,ax
 %endmacro
 
+%macro add_bx_bp 0
+	db	0x03,0xdd ; add bx,bp
+%endmacro
+
 %macro add_ax 1
 	db	0x05
 	dw	%1
