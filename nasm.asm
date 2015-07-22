@@ -101,6 +101,10 @@
 	db	0x2b,0xd2 ; sub dx,dx
 %endmacro
 
+%macro sub_bx_bx 0
+	db	0x2b,0xdb ; sub bx,bx
+%endmacro
+
 %macro sub_si_si 0
 	db	0x2b,0xf6 ; sub si,si
 %endmacro
