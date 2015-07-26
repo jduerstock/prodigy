@@ -113,6 +113,10 @@
 	db	0x2b,0xf6 ; sub si,si
 %endmacro
 
+%macro sub_di_di 0
+	db	0x2b,0xff ; sub di,di
+%endmacro
+
 %macro sub_ax 1
 	db	0x2d
 	dw	%1
