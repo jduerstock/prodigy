@@ -198,10 +198,13 @@
 
 .l1856:
 	cmp	al,[bx+si+0xd4]
-	db	0x74,0x07,0x77,0x0f,0x46
+	jz	.l1863
+	ja	.l186d
+	inc	si
 	loop	.l1856
 	jmp	short .l186d
 
+.l1863:
 	mov	ah,0x1
 	mov	[bx+0xcf],ax
 	mov	al,[bx+0xd3]
