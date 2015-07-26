@@ -130,6 +130,10 @@
 	db	0x33,0xd0 ; xor dx,ax
 %endmacro
 
+%macro xor_bx_bx 0
+	db	0x33,0xdb ; xor bx,bx
+%endmacro
+
 %macro xor_si_si 0
 	db	0x33,0xf6 ; xor si,si
 %endmacro
