@@ -130,6 +130,10 @@
 	db	0x33,0xd0 ; xor dx,ax
 %endmacro
 
+%macro xor_di_di 0
+	db	0x33,0xff ; xor di,di
+%endmacro
+
 %macro cmp_ax 1
 	db	0x3d
 	dw	%1
