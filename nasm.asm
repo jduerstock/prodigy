@@ -68,6 +68,10 @@
 	db	0x13,0xda ; adc bx,dx
 %endmacro
 
+%macro and_ax_ax 0
+	db	0x23,0xc0 ; and ax,ax
+%endmacro
+
 %macro and_ax 1
 	db	0x25
 	dw	%1
