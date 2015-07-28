@@ -197,11 +197,15 @@ sub_3b318:
 	call	word sub_3e90a
 
 .l0952:
-	db	0xb8,0xfe,0x47,0x8c,0xda,0xeb,0x03
+	mov	ax,0x47fe
+	mov	dx,ds
+	jmp short 0x95c
 
 .l0959:
 	sub_ax_ax
 	cwd
+
+.l095c:
 	pop	si
 	pop	di
 	mov_sp_bp
