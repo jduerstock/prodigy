@@ -220,7 +220,11 @@
 %endmacro
 
 %macro mov_di_ax 0
-	db	0x8b,0xf8 ; mov si,ax
+	db	0x8b,0xf8 ; mov di,ax
+%endmacro
+
+%macro mov_di_bx 0
+	db	0x8b,0xfb ; mov di,bx
 %endmacro
 
 %macro axpush 1
