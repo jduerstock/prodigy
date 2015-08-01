@@ -7,12 +7,8 @@ sub_1275c:
 	mov	word [bp-0xe],0x7
 	mov	byte [bp-0x1b],0x1b
 	pushlvarptr 0x8
-	lea	ax,[bp-0x2a]
-	push	ss
-	push	ax
-	lea	ax,[bp-0x1c]
-	push	ss
-	push	ax
+	pushlvarptr 0x2a
+	pushlvarptr 0x1c
 	axpush	0x21
 	call	word 0x55:0xf5e
 	add	sp,byte +0xe
@@ -76,9 +72,7 @@ sub_1275c:
 
 .l7d86:
 	push	word [bp-0xe]
-	lea	ax,[bp-0x32]
-	push	ss
-	push	ax
+	pushlvarptr 0x32
 	push	word [bp-0x38]
 	call	word 0x55:0xab2
 	add	sp,byte +0x8
@@ -86,14 +80,11 @@ sub_1275c:
 	call	word 0x55:0x868
 	add	sp,byte +0x2
 	mov	[bp-0x34],ax
-	mov	ax,0x6
-	push	ax
+	axpush	0x6
 	mov	ax,0x29b
 	push	ds
 	push	ax
-	lea	ax,[bp-0x32]
-	push	ss
-	push	ax
+	pushlvarptr 0x32
 	call	word 0x55:0x1218
 	add	sp,byte +0xa
 	mov	[bp-0x3a],ax
@@ -178,9 +169,7 @@ sub_1275c:
 	mov	ax,0x306
 	push	ds
 	push	ax
-	lea	ax,[bp-0x10]
-	push	ss
-	push	ax
+	pushlvarptr 0x10
 	call	word 0x18ee:0x14b3
 	or_ax_ax
 	ljnz	.l804a
@@ -635,11 +624,8 @@ sub_1398a:
 	mov	ax,0xbef
 	push	ds
 	push	ax
-	mov	ax,0x22
-	push	ax
-	lea	ax,[bp-0x2]
-	push	ss
-	push	ax
+	axpush	0x22
+	pushlvarptr 0x2
 	call	word x_sub_1a442
 	or_ax_ax
 	jz	.l8f78
