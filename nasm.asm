@@ -252,3 +252,9 @@
 	%%skip:
 %endmacro
 
+%macro	pushlvarptr 1
+	lea	ax,[bp-%1]
+	push	ss
+	push	ax
+%endmacro
+
