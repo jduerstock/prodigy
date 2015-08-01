@@ -19,17 +19,10 @@ sub_18bae:
 
 .le160:
 	mov	[bp-0x1e],es
-	lea	ax,[bp-0x8]
-	push	ss
-	push	ax
-	lea	ax,[bp-0x2c]
-	push	ss
-	push	ax
-	lea	ax,[bp-0x1e]
-	push	ss
-	push	ax
-	mov	ax,0x33
-	push	ax
+	pushlvarptr 0x8
+	pushlvarptr 0x2c
+	pushlvarptr 0x1e
+	axpush	0x33
 	call	word 0x55:0xf5e
 	add	sp,byte +0xe
 	inc	ax
@@ -45,17 +38,10 @@ sub_18bae:
 	mov	[bp-0x8],ax
 	mov	ax,[bp-0x10]
 	mov	[bp-0x18],ax
-	lea	ax,[bp-0x8]
-	push	ss
-	push	ax
-	lea	ax,[bp-0x2c]
-	push	ss
-	push	ax
-	lea	ax,[bp-0x1e]
-	push	ss
-	push	ax
-	mov	ax,0x33
-	push	ax
+	pushlvarptr 0x8
+	pushlvarptr 0x2c
+	pushlvarptr 0x1e
+	axpush	0x33
 	call	word 0x55:0xf5e
 	add	sp,byte +0xe
 	mov	ax,0x405

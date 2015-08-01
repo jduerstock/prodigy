@@ -12,9 +12,7 @@ sub_18a42:
 	jnz	.ldfe6
 
 .ldfcf:
-	lea	ax,[bp-0x2]
-	push	ss
-	push	ax
+	pushlvarptr 0x2
 	call	word x_sub_10a67
 	add	sp,byte +0x4
 	or_ax_ax

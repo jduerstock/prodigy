@@ -642,9 +642,7 @@ sub_1398a:
 
 .l8f78:
 	push	word [bp-0x2]
-	lea	ax,[bp-0x6]
-	push	ss
-	push	ax
+	pushlvarptr 0x6
 	call	word x_sub_14ed8
 	cmp	word [bp-0x6],byte +0x0
 	jnz	.l8f65
@@ -816,14 +814,10 @@ sub_1398a:
 	jmp	word .l8f34
 
 .l916b:
-	lea	ax,[bp-0x40]
-	push	ss
-	push	ax
+	pushlvarptr 0x40
 	call	word x__time
 	add	sp,byte +0x4
-	lea	ax,[bp-0x40]
-	push	ss
-	push	ax
+	pushlvarptr 0x40
 	call	word x__localtime
 	add	sp,byte +0x4
 	lea	di,[bp-0x1e]
@@ -914,17 +908,11 @@ sub_1398a:
 	add	dl,0x30
 	les	bx,[bp-0x3c]
 	mov	[es:bx+0x5],dl
-	mov	ax,0xc
-	push	ax
-	lea	ax,[bp-0x3c]
-	push	ss
-	push	ax
+	axpush	0xc
+	pushlvarptr 0x3c
 	call	word x_sub_3ada6
-	mov	ax,0xb
-	push	ax
-	lea	ax,[bp-0x36]
-	push	ss
-	push	ax
+	axpush	0xb
+	pushlvarptr 0x36
 	call	word x_sub_3ada6
 	mov	byte [bp-0x20],0x10
 	sub_ax_ax
@@ -937,9 +925,7 @@ sub_1398a:
 	mov	[bp-0x2e],ax
 	mov	[bp-0x30],ax
 	mov	[bp-0x2c],ax
-	lea	ax,[bp-0x30]
-	push	ss
-	push	ax
+	pushlvarptr 0x30
 	call	word x_sub_3a9ae
 	jmp	word .l8f78
 
