@@ -342,12 +342,8 @@ sub_2370c:
 	push	word [bp+0xc]
 	les	bx,[bp+0xc]
 	push	word [es:bx+0xe]
-	lea	ax,[bp-0x10]
-	push	ss
-	push	ax
-	lea	ax,[bp-0x14]
-	push	ss
-	push	ax
+	pushlvarptr 0x10
+	pushlvarptr 0x14
 	push	cs
 	call	word sub_241cf
 	mov	si,[bp-0x14]
