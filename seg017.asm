@@ -87,13 +87,9 @@ sub_1ad6a:
 .l0373:
 	mov	al,[bp+0x4]
 	mov	[bp-0x4],al
-	mov	ax,0x1
-	push	ax
-	lea	ax,[bp-0x4]
-	push	ss
-	push	ax
-	mov	ax,0x4
-	push	ax
+	axpush	0x1
+	pushlvarptr 0x4
+	axpush	0x4
 	call	word 0x55:0xb9c ; __bios_printer
 	add	sp,byte +0x8
 	mov	es,[0x4182]

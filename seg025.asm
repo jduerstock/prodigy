@@ -281,22 +281,15 @@ sub_1d254:
 	sub	sp,byte +0x12
 	push	word [bp+0x8]
 	push	word [bp+0x6]
-	lea	ax,[bp-0x2]
-	push	ss
-	push	ax
-	lea	ax,[bp-0xe]
-	push	ss
-	push	ax
-	lea	ax,[bp-0xc]
-	push	ss
-	push	ax
+	pushlvarptr 0x2
+	pushlvarptr 0xe
+	pushlvarptr 0xc
 	push	cs
 	call	word sub_1d3db
 	push	word [bp+0x8]
 	push	word [bp+0x6]
 	push	word [bp-0x2]
-	sub_ax_ax
-	push	ax
+	axpush	0x0
 	push	cs
 	call	word sub_1d700
 	mov	[bp-0x12],ax
@@ -304,8 +297,7 @@ sub_1d254:
 	push	word [bp+0x8]
 	push	word [bp+0x6]
 	push	word [bp-0xe]
-	mov	ax,0x3
-	push	ax
+	axpush	0x3
 	push	cs
 	call	word sub_1d700
 	mov	[bp-0xa],ax
@@ -313,8 +305,7 @@ sub_1d254:
 	push	word [bp+0x8]
 	push	word [bp+0x6]
 	push	word [bp-0xc]
-	mov	ax,0x4
-	push	ax
+	axpush	0x4
 	push	cs
 	call	word sub_1d700
 	mov	[bp-0x6],ax

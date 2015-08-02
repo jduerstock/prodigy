@@ -69,7 +69,7 @@ sub_18bae:
 	mov	es,[0x4150]
 	mov	ax,[es:0xa8]
 	sub_dx_dx
-	div word [0x304]
+	div	word [0x304]
 	mov	[0x49b8],ax
 	or_ax_ax
 	jnz	.le21b
@@ -150,17 +150,10 @@ sub_18bae:
 	mov	word [bp-0x12],0x0
 	mov	word [bp-0x8],0x0
 	mov	word [bp-0x10],0x0
-	lea	ax,[bp-0x8]
-	push	ss
-	push	ax
-	lea	ax,[bp-0x24]
-	push	ss
-	push	ax
-	lea	ax,[bp-0x16]
-	push	ss
-	push	ax
-	mov	ax,0x33
-	push	ax
+	pushlvarptr 0x8
+	pushlvarptr 0x24
+	pushlvarptr 0x16
+	axpush	0x33
 	call	word 0x55:0xf5e
 	add	sp,byte +0xe
 	sub_ax_ax
