@@ -93,6 +93,10 @@
 	db	0x2a,0xed ; sub ch,ch
 %endmacro
 
+%macro sub_bh_bh 0
+	db	0x2a,0xff ; sub bh,bh
+%endmacro
+
 %macro sub_ax_ax 0
 	db	0x2b,0xc0 ; sub ax,ax
 %endmacro
