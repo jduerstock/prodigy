@@ -281,3 +281,9 @@
 	push	ax
 %endmacro
 
+%macro call_318a2 3
+	axpush	%1
+	axpush	%2
+	axpush	%3
+	call	word 0x217f:0xb2
+%endmacro
