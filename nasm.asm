@@ -150,6 +150,10 @@
 	db	0x33,0xff ; xor di,di
 %endmacro
 
+%macro cmp_cx_ax 0
+	db	0x3b,0xc8 ; cmp cx,ax
+%endmacro
+
 %macro cmp_bx_dx 0
 	db	0x3b,0xda ; cmp bx,dx
 %endmacro
