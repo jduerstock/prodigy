@@ -240,6 +240,17 @@
 	push	ax
 %endmacro
 
+%macro axpush2 1
+	axpush %1
+	push	ax
+%endmacro
+
+%macro axpush3 1
+	axpush %1
+	push	ax
+	push	ax
+%endmacro
+
 %macro ljz 1
 	jnz	%%skip
 	jmp	word %1
