@@ -46,9 +46,7 @@ sub_41e7e:
 	mov	[bp-0x12],dx
 	push	dx
 	push	ax
-	lea	ax,[bp-0x18]
-	push	ss
-	push	ax
+	pushlvarptr 0x18
 	call	word 0x38c4:0xc
 
 .l747e:

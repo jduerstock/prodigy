@@ -470,8 +470,7 @@ sub_3b45b:
 	push	word [bp+0x12]
 	push	word [bp+0x10]
 	push	word [bp+0xe]
-	mov	ax,0x2f
-	push	ax
+	axpush	0x2f
 	call	word 0x3cf8:0x68e
 	add	sp,byte +0x16
 	push	word [bp+0x14]
@@ -3796,9 +3795,7 @@ sub_40f15:
 	push	ax
 	push	word [es:bx+0x2]
 	push	word [es:bx]
-	lea	ax,[bp-0x44]
-	push	ss
-	push	ax
+	pushlvarptr 0x44
 	db	0x9a,0xb2,0x12,0x55,0x00
 	add	sp,byte +0xa
 	mov	bx,[bp-0x12]
@@ -3871,17 +3868,13 @@ sub_41c8a:
 	push	ax
 	push	word [es:bx+0x2]
 	push	word [es:bx]
-	lea	ax,[bp-0x40]
-	push	ss
-	push	ax
+	pushlvarptr 0x40
 	call	word 0x55:0x12b2 ; _memmove
 	add	sp,byte +0xa
 	mov	bx,[bp-0xe]
 	add_bx_bp
 	mov	byte [bx-0x40],0x0
-	lea	ax,[bp-0x40]
-	push	ss
-	push	ax
+	pushlvarptr 0x40
 	push	cs
 	db	0xe8,0x2f,0xfd
 	mov	[bp-0xe],ax
