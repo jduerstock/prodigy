@@ -17,20 +17,14 @@ sub_33d23:
 	push	si
 	push	word [es:bx+0x2]
 	push	word [es:bx]
-	lea	ax,[bp-0x3f]
-	push	ss
-	push	ax
+	pushlvarptr 0x3f
 	call	word 0x55:0xd9a
 	add	sp,byte +0xa
-	lea	ax,[bp-0x40]
-	push	ss
-	push	ax
+	pushlvarptr 0x40
 	push	si
 	mov	es,[0x4422]
 	push	word [es:0x67c]
-	lea	ax,[bp-0x46]
-	push	ss
-	push	ax
+	pushlvarptr 0x46
 	call	word 0x275:0x43d1
 	mov	ax,[bp-0x46]
 	cmp_ax	0x11
@@ -119,9 +113,7 @@ sub_33d23:
 	call	word 0x217f:0xb2
 
 .l9391:
-	lea	ax,[bp-0x46]
-	push	ss
-	push	ax
+	pushlvarptr 0x46
 	call	word 0x275:0x436e ; sub_16abe
 	call	word sub_33d23
 	jmp	short .l93f8
