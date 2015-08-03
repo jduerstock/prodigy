@@ -267,6 +267,13 @@
 	push	ax
 %endmacro
 
+%macro pushptr 2
+	mov	ax,%2
+	mov	dx,%1
+	push	dx
+	push	ax
+%endmacro
+
 %macro ljz 1
 	jnz	%%skip
 	jmp	word %1
