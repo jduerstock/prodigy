@@ -107,10 +107,7 @@ sub_33d23:
 	jmp	short .l9329
 
 .l9381:
-	axpush	0x4
-	axpush	0x0
-	axpush	0x1
-	call	word 0x217f:0xb2
+	call_318a2 4,0,1
 
 .l9391:
 	pushlvarptr 0x46
