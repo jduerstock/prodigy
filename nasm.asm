@@ -292,6 +292,12 @@
 	push	ax
 %endmacro
 
+%macro	pushgvarptr 1
+	mov	ax,%1
+	push	ds
+	push	ax
+%endmacro
+
 %macro call_318a2 3
 	axpush	%1
 	axpush	%2
