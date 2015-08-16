@@ -163,7 +163,7 @@ sub_28bc2:
 	sub_ax_ax
 
 .le463:
-	db	0x5e
+	pop	si
 	mov_sp_bp
 	pop	bp
 	retf	0x4
