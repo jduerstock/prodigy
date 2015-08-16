@@ -289,11 +289,7 @@ sub_291e0:
 	mov	word [bp-0x2],0x0
 	mov	es,[0x43ae]
 	cmp	word [es:0x7c4],byte +0x0
-;	ljnz	.le818
-	jz	.le77a
-	jmp	word .le818
-
-.le77a:
+	ljnz	.le818
 	axpush	0xd
 	pushptr	0x3e70,0x156a
 	mov	ax,[bp+0x8]
