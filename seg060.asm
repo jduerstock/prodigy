@@ -667,7 +667,7 @@ sub_29576:
 	push	cs
 	call	word sub_293d8
 
-.leb15
+.leb15:
 	mov_sp_bp
 	pop	bp
 	retf	0x4
