@@ -2222,7 +2222,7 @@ sub_2a468:
 	push	es
 	push	bx
 	push	cs
-	call	word 0xea6a
+	call	word sub_294ea
 	cmp_ax	0x1
 	jnl	.lfa4f
 	les	bx,[bp+0xa]
