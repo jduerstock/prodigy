@@ -2631,6 +2631,8 @@ sub_2a85f:
 	call	word sub_2a3c5
 	or_ax_ax
 	jz	.lfe0a
+
+.lfe04:
 	mov	ax,0xffff
 	jmp	word .lfea4
 
@@ -2641,6 +2643,7 @@ sub_2a85f:
 	mov	word [bp-0xa],0x0
 	jmp	short .lfe1e
 
+.lfe1b:
 	inc	word [bp-0xa]
 
 .lfe1e:
@@ -2654,11 +2657,12 @@ sub_2a85f:
 	push	cs
 	call	word sub_2a3c5
 	or_ax_ax
-	db	0x74,0xe0,0xeb,0xc7
+	jz	.lfe1b
+	jmp	short .lfe04
 
 .lfe3d:
 	sub_ax_ax
-	db	0xeb,0x63
+	jmp	short .lfea4
 
 .lfe41:
 	db	0x80,0x7e,0xfc,0x0f,0x75,0xbd,0xff,0x76,0x0c,0xff,0x76,0x0a
